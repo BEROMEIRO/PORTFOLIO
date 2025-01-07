@@ -1,0 +1,26 @@
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<section id="about" class="about_flex">
+    <div class="About-title">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>    
+    <div class="aboutme-container">
+        <img src="{% static 'images/hero-bg.jpg' %}" alt="Profile Picture" class="about-img">
+        <h2>UI/UX Designer & Web Developer.</h2>
+        <div class="details">
+            <p><strong>Birthday:</strong> 13 Out 1992</p>
+            <p><strong>Phone:</strong> +55 (11) 97777-7233</p>
+            <p><strong>City:</strong> São Paulo, BRA</p>
+            <p><strong>Age:</strong> 32</p>
+            <p><strong>Profession:</strong> Front End Developer and Application Developer</p>
+            <p><strong>Email:</strong> gabriel_serafin1@outlook.com.br</p>
+            <p><strong>Freelance:</strong> Available</p>
+        </div>
+        <p>I'm a passionate developer with expertise in...</p>
+    </div>
+</section>
+{% endblock %}

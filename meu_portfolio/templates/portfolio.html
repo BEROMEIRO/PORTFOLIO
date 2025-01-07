@@ -1,0 +1,23 @@
+{% load static %}
+
+{% block content %}
+<section id="portfolio" class="portfolio_main">
+    <div class="portfolio_titlle">
+        <h2>My Portfolio</h2>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="portfolio-filter">
+        <button onclick="filterPortfolio('all')">All</button>
+        <button onclick="filterPortfolio('app')">Apps</button>
+        <button onclick="filterPortfolio('card')">Cards</button>
+        <button onclick="filterPortfolio('web')">Web</button>
+    </div>
+    
+    <!-- Inclua o conteúdo de portfolio_projects.html -->
+    {% include "portfolio_projects.html" %}
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/portfolio-filter.js' %}"></script>
+{% endblock %}

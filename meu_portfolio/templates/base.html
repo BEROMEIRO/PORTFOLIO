@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'head.html' %}
+<body>
+    <div class="layout">
+        <nav class="menu">
+            {% include 'menu.html' %}            
+        </nav>
+        <main id="main" class="content">
+            {% block content %}
+                {% include 'home.html' %}
+                {% include 'about.html' %}
+                {% include 'services.html' %}
+                {% include 'portfolio.html' %}
+                {% include 'contact.html' %}
+                <button id="scrollToTop" class="back-to-top" type="button">↑</button>
+                
+            {% endblock %}
+        </main>
+    </div> 
+    <script src="{% static 'js/scrollToTop.js' %}"></script>
+    <script src="{% static 'js/footerFixed.js' %}"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,36 @@
+
+{% load static %}
+<!-- Contact Section -->
+
+<form method="POST" action="/enviar-contato/" class="form">
+    {% csrf_token %}
+    <!-- Linha 1: Name e Email lado a lado -->
+    <div class="form-row">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+    </div>
+    <!-- Linha 2: Subject -->
+    <div class="form-row">
+        <div class="form-group full-width">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" required>
+        </div>
+    </div>
+    <!-- Linha 3: Message -->
+    <div class="form-row">
+        <div class="form-group full-width">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+        </div>
+    </div>
+    <!-- Botão de envio -->
+    <div class="form-row button-row">
+        <button type="submit">Send Message</button>
+    </div>
+</form>

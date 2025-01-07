@@ -1,0 +1,22 @@
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<section id="home" class="home_flex">
+    <div class="home-container" data-aos="fade-in">
+        <h1>Gabriel Romeiro</h1>
+        <p>I'm 
+            <span class="typed" 
+                data-typed-items="Designer, Developer, Freelancer">
+            </span>
+        </p>
+    </div>
+    
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="{% static 'js/typed.js' %}"></script>
+<script src="{% static 'js/parallax.js' %}"></script>
+{% endblock %}
