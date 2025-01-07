@@ -64,7 +64,7 @@ h6 {
     bottom: 0;
     width: 270px;
     padding: 0 15px;
-    background: #040b14;
+    background: #2d5268;
     overflow-y: auto;
     transition: all ease-in-out 0.5s;
 }
@@ -146,7 +146,7 @@ h6 {
     margin: 15px auto;
     display: block;
     width: 120px;
-    border: 8px solid rgb(68, 64, 64);
+    border: 8px solid rgb(191, 210, 216);
 }
 
 .profile h1 {
@@ -161,7 +161,7 @@ h6 {
 
 .profile h1 a,
 .profile h1 a:hover {
-    color: #fff;
+
     text-decoration: none;
 }
 
@@ -187,12 +187,7 @@ h6 {
 
 /*-------Navigation Menu-----*/
 .sidebar {
-    /* position: fixed; */
-    top: 0;
-    /* left: 0; */
-    bottom: 0;
-    width: 270px;
-    background: #040b14;
+
     color: white;
     display: flex;
     flex-direction: column;
@@ -217,7 +212,7 @@ nav.sidebar img {
 .sidebar .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     padding: 10px 0;
 }
 
@@ -225,7 +220,7 @@ nav.sidebar img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #212431;
+    /* background: #D8BFD8; */
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -238,7 +233,7 @@ nav.sidebar img {
 }
 
 .sidebar .social-links .img-link:hover {
-    background: #8a8787;
+    background: #b6d1dd;
     transform: scale(1);
 }
 
@@ -257,11 +252,12 @@ nav.sidebar img {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .sidebar ul li a:hover {
-    background-color: #09192e;
+    background-color: #7d95a0;
+
 }
 
 /*----About------*/
@@ -354,13 +350,11 @@ nav.sidebar img {
 
 .menu a {
     color: white;
-    padding: 10px;
+    padding: 1px;
     text-decoration: none;
 }
 
-.menu a:hover {
-    background-color: #09192e;
-}
+
 
 .menu-footer {
     width: 100%;
