@@ -1,0 +1,17 @@
+<!-- mini_menu.html -->
+{% load static %}
+<button id="mini_menu-toggle" class="mini_menu-toggle-btn" type="button" >&#9776;</button>
+
+
+<nav class="mini_menu" id="mini_menu">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>    
+</nav>
+{% block scripts %}
+<script src="{% static 'js/mini_menu.js' %}"></script>
+{% endblock %}

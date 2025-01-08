@@ -1,4 +1,6 @@
 /*-----General----*/
+
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #272829;
@@ -32,7 +34,7 @@ h6 {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #bee1e7;
+    background: #81aab1;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -46,8 +48,8 @@ h6 {
 }
 
 .back-to-top:hover {
-    background: #66dbf0;
-    color: #fff;
+    background: #bbeef7;
+    color: #000000;
 }
 
 .back-to-top.active {
@@ -79,7 +81,6 @@ h6 {
     padding-left: 30px;
     padding-right: 30px;
 }
-
 
 @media (max-width: 1023px) {
 
@@ -140,7 +141,6 @@ h6 {
     }
 }
 
-
 /*-------Profile-----*/
 .profile img {
     margin: 15px auto;
@@ -154,14 +154,12 @@ h6 {
     margin: 0;
     padding: 0;
     font-weight: 600;
-
     text-align: center;
     font-family: "Poppins", sans-serif;
 }
 
 .profile h1 a,
 .profile h1 a:hover {
-
     text-decoration: none;
 }
 
@@ -187,15 +185,79 @@ h6 {
 
 /*-------Navigation Menu-----*/
 .sidebar {
-
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
     overflow-y: auto;
+    position: relative;
+    z-index: 999;
 }
 
+
+/*---------Mini Menu---------*/
+.mini_menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(255, 255, 255);
+    z-index: 1000;
+}
+
+.mini_menu.show {
+    display: block;
+}
+
+.mini_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mini_menu ul li {
+    margin: 10px 0;
+}
+
+.mini_menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.mini_menu ul li a:hover {
+    background-color: #555;
+}
+
+.mini_menu-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    display: block;
+}
+
+
+@media (min-width: 1024px) {
+    .mini_menu-toggle-btn {
+        display: none;
+    }
+}
+
+/* end Mini Menu */
 nav.sidebar img {
     width: 120px;
     height: 120px;
@@ -220,7 +282,6 @@ nav.sidebar img {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: #D8BFD8; */
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -257,13 +318,13 @@ nav.sidebar img {
 
 .sidebar ul li a:hover {
     background-color: #7d95a0;
-
 }
 
 /*----About------*/
 #about {
     display: flex;
     background-color: #dff3fc;
+    box-sizing: border-box;
 }
 
 .about-img {
@@ -273,6 +334,7 @@ nav.sidebar img {
     width: 100%;
     height: 108px;
     margin: 0 20px;
+    max-width: 150px;
 }
 
 .About-title {
@@ -282,6 +344,7 @@ nav.sidebar img {
     gap: 20px;
     background-color: #bee1e7;
     padding: 1.2em;
+    box-sizing: border-box;
 }
 
 .About-title h1,
@@ -294,6 +357,7 @@ nav.sidebar img {
     padding-bottom: 20px;
     position: relative;
     color: #173b6c;
+    word-wrap: break-word;
 }
 
 .About-title h1::after,
@@ -322,11 +386,14 @@ nav.sidebar img {
 .aboutme-container {
     width: 100%;
     padding: 1.2em;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
 .aboutme-container h1 {
     font-size: 2.5em;
     color: #333;
+    word-wrap: break-word;
 }
 
 .aboutme-container img {
@@ -335,6 +402,8 @@ nav.sidebar img {
     border-radius: 50%;
     margin: 20px 0;
     object-fit: cover;
+    box-sizing: border-box;
+    margin: 10px 0;
 }
 
 .details p {
@@ -342,9 +411,34 @@ nav.sidebar img {
     font-size: 1em;
 }
 
+@media (max-width: 768px) {
+    .about_flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutme-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about-img {
+        margin: 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .aboutme-container h1 {
+        font-size: 2em;
+    }
+
+    .details p {
+        font-size: 0.9em;
+    }
+}
+
 /*----Base---*/
 .layout {
-
     min-height: 100vh;
 }
 
@@ -353,8 +447,6 @@ nav.sidebar img {
     padding: 1px;
     text-decoration: none;
 }
-
-
 
 .menu-footer {
     width: 100%;
@@ -383,7 +475,7 @@ nav.sidebar img {
     font-weight: 700;
     line-height: 56px;
     color: whitesmoke;
-
+    text-align: center;
 }
 
 .home_flex p {
@@ -392,6 +484,7 @@ nav.sidebar img {
     font-size: 26px;
     font-family: "Poppins", sans-serif;
     padding: 1.2em;
+    text-align: center;
 }
 
 .home_flex p span {
@@ -399,6 +492,39 @@ nav.sidebar img {
     padding-bottom: 4px;
     letter-spacing: 1px;
     border-bottom: 3px solid #149ddd;
+}
+
+@media (max-width: 768px) {
+    #home {
+        height: 60vh;
+    }
+
+    .home_flex h1 {
+        margin: 50px 10px 10px 10px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .home_flex p {
+        font-size: 18px;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        height: 70vh;
+    }
+
+    .home_flex h1 {
+        margin: 20px 5px 5px 5px;
+        font-size: 24px;
+    }
+
+    .home_flex p {
+        font-size: 16px;
+        padding: 0.5em;
+    }
 }
 
 /*-----portfolio--------*/
@@ -424,6 +550,8 @@ nav.sidebar img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: fit-content;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .portfolio-filter button {
@@ -444,8 +572,6 @@ nav.sidebar img {
     background-color: #444;
 }
 
-
-
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -454,8 +580,6 @@ nav.sidebar img {
     margin: 0 auto;
     padding: 20px;
 }
-
-
 
 .project {
     text-align: center;
@@ -466,7 +590,6 @@ nav.sidebar img {
     width: 100%;
     display: block;
 }
-
 
 .project.hidden {
     opacity: 0;
@@ -484,7 +607,6 @@ nav.sidebar img {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-
 .project img {
     width: 100%;
     border-radius: 8px;
@@ -498,12 +620,9 @@ nav.sidebar img {
     transition: 0.51s;
 }
 
-
 .project p {
     margin-top: 10px;
 }
-
-
 
 .projects .portfolio-wrap {
     opacity: 1;
@@ -541,12 +660,17 @@ nav.sidebar img {
     bottom: 0;
 }
 
+.projects p {
+    visibility: hidden;
+}
+
 /*------contact-----*/
 .contact_main {
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+    box-sizing: border-box;
 }
 
 .contact-container {
@@ -554,14 +678,12 @@ nav.sidebar img {
     background: #dff3fc;
     display: flex;
     bottom: 12px;
-
+    padding: 20px;
 }
 
 .contact-container h3 {
     color: #149ddd;
 }
-
-
 
 .contact_tittle {
     padding: 1.2em;
@@ -570,14 +692,11 @@ nav.sidebar img {
     background-color: #bee1e7;
 }
 
-
-
 .contact-info {
     padding: 30px;
     background: #fff;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
-
 
 .form {
     font-size: 20px;
@@ -590,7 +709,6 @@ nav.sidebar img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .form-row {
     display: flex;
     flex-wrap: wrap;
@@ -602,7 +720,6 @@ nav.sidebar img {
     display: flex;
     flex-direction: column;
     flex: 1;
-
 }
 
 .form-group label {
@@ -628,13 +745,11 @@ nav.sidebar img {
 
 .form-group textarea {
     height: 350px;
-
 }
 
 .button-row {
     display: flex;
     justify-content: center;
-
 }
 
 button[type="submit"] {
@@ -646,13 +761,28 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
 }
 
 button[type="submit"]:hover {
     background-color: #0d8adf;
 }
 
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-info,
+    .form {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .contact-info iframe {
+        height: 200px;
+    }
+}
 
 /*-------services----- */
 .service_main {
@@ -670,7 +800,6 @@ button[type="submit"]:hover {
     align-items: center;
     gap: 20px;
     background-color: #bee1e7;
-
 }
 
 /*-----*/
