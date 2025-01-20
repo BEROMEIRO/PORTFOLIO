@@ -10,4 +10,4 @@ def lista_projetos(request):
 
 def detalhes_projeto(request, projeto_id):
     project = get_object_or_404(Project, id=projeto_id)
-    return render(request, 'portfolio/detalhes_projeto.html', {'project': project})
+    return render(request, 'project_details.html', {'project': project})
